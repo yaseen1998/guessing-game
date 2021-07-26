@@ -1,0 +1,17 @@
+nav {
+    text-align: center ;
+    font-size: 25px;
+}
+header{text-align: center}
+a{text-decoration: none;color:rgb(10, 6, 245);}
+section{border: double;border-width:10px;padding:10px;background-color:burlywood;font-size:20px}
+div{border: solid; padding:20px;margin:5px;max-width:450px}
+aside {
+    width: 350px;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: right;
+    font-size :20px;
+    background-color: lightgray;}
+
+    body{ background-color: rgb(14 125 190 / 43%);}
