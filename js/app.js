@@ -19,7 +19,7 @@ function trueanswer(x){
   
 }
 let username = prompt ('what is your name ');
-alert('I am Glad that you are here'+ username);
+alert('I am Glad that you are here : '+ username);
 
 
     let ask = prompt('1-check the Resume'+'\n'+'2-play a guessing-game'+'\n'+'please choose a number')
@@ -82,27 +82,27 @@ alert('Thanks you to visit us '+ username);
 //     }
 // }
 // }
-let true_number = Math.floor(Math.random() * 100) + 1
-console.log(true_number)
-let guess_number =parseInt( prompt('please guess a number from (1-100)'));
+// let true_number = Math.floor(Math.random() * 100) + 1
+// console.log(true_number)
+// let guess_number =parseInt( prompt('please guess a number from (1-100)'));
 
-for(let i = 0;  guess_number != true_number  ; i++){
-    console.log(i)
+// for(let i = 0;  guess_number != true_number  ; i++){
+//     console.log(i)
 
-    if (i == 3){
-        alert('you try 4 time game over')
-        break;
-    }
-     else if (guess_number < true_number ){
-        alert('choose a big number')
-     }
+//     if (i == 3){
+//         alert('you try 4 time game over')
+//         break;
+//     }
+//      else if (guess_number < true_number ){
+//         alert('choose a big number')
+//      }
         
-    else{
-        alert('choose a small number');
+//     else{
+//         alert('choose a small number');
         
-    }
+//     }
     
-     guess_number =parseInt( prompt('please guess a number from (1-100)'));
+//      guess_number =parseInt( prompt('please guess a number from (1-100)'));
 
     
-}
+// }
