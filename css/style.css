@@ -5,7 +5,7 @@ nav {
 header{text-align: center}
 a{text-decoration: none;color:rgb(10, 6, 245);}
 section{border: double;border-width:10px;padding:10px;background-color:burlywood;font-size:20px}
-div{border: solid; padding:20px;margin:5px;max-width:450px}
+.cla1{border: solid; padding:20px;margin:5px;max-width:450px;border-width:10px;}
 aside {
     width: 350px;
     padding-left: 15px;
@@ -15,3 +15,22 @@ aside {
     background-color: lightgray;}
 
     body{ background-color: rgb(14 125 190 / 43%);}
+    ul li {padding:20px }
+    ol {
+        display: block;
+        list-style-type: decimal;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+        font-size :20px;
+    }
+
+div {font-size :20px;
+display: block;
+padding:20px;
+background-color:blueviolet;
+border:dashed;
+ border-width:10px;
+}
