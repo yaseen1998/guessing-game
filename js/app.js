@@ -1,6 +1,6 @@
  'use strict'
  function falsanswer(x){
-    if (x == 'n'){
+    if (x == 'n' || x=='no'){
     return 'your answer is crroect';
     }
     else{
@@ -10,7 +10,7 @@
 }
  
 function trueanswer(x){
-    if (x == 'y'){
+    if (x == 'y' || x == 'yes' ){
     return 'your answer is crroect';
     }
     else{
@@ -18,13 +18,17 @@ function trueanswer(x){
     }
   
 }
+let username = prompt ('what is your name ');
+alert('I am Glad that you are here'+ username);
 
 
     let ask = prompt('1-check the Resume'+'\n'+'2-play a guessing-game'+'\n'+'please choose a number')
 
 switch(ask){
-case ('2'):alert('hello'+'\n'+'today you will play a guessing game about Yaseen Saeed'+'\n'+'you can answer with y/n')
+case ('2'):alert('hello'+'\n'+'today you will play a guessing game about Yaseen Saeed'+'\n')
+confirm('you can answer with y/n or yes/no')
  confirm('lets begin')
+
 let sex = prompt(' is he a pogrammer?').toLocaleLowerCase();
 console.log(sex);
  let answer = trueanswer(sex);
@@ -60,4 +64,45 @@ break;
 default:
       alert('You didnt answer :');
 }
+alert('Thanks you to visit us '+ username);    
+// for (let i = 0;i<4;i++){
+// let guess_number =parseInt( prompt('please guess a number from (1-100)'));
+// if(guess_number == true_number){
+//     alert('choose a correct');
+//     break;
+// }
+// while(guess_number != true_number){
+//     if(guess_number < true_number){
+//         alert('choose a big number');
+//         break;
+//     }
+//     else{
+//         alert('choose a small number');
+// break;         
+//     }
+// }
+// }
+let true_number = Math.floor(Math.random() * 100) + 1
+console.log(true_number)
+let guess_number =parseInt( prompt('please guess a number from (1-100)'));
 
+for(let i = 0;  guess_number != true_number  ; i++){
+    console.log(i)
+
+    if (i == 3){
+        alert('you try 4 time game over')
+        break;
+    }
+     else if (guess_number < true_number ){
+        alert('choose a big number')
+     }
+        
+    else{
+        alert('choose a small number');
+        
+    }
+    
+     guess_number =parseInt( prompt('please guess a number from (1-100)'));
+
+    
+}
