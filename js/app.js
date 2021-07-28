@@ -20,6 +20,11 @@ function trueanswer(x){
     }
   
 }
+function question (ask){
+    let ans = prompt(ask).toLocaleLowerCase();
+    console.log(ans);
+    return (ans)
+}
 let corr = 0;
 let wrong = 0;
 let username = prompt ('what is your name ');
@@ -33,31 +38,26 @@ case ('2'):alert('hello'+'\n'+'today you will play a guessing game about Yaseen 
 confirm('you can answer with y/n or yes/no')
  confirm('lets begin')
 
-let sex = prompt(' 1-is he a pogrammer?').toLocaleLowerCase();
-console.log(sex);
- let answer = trueanswer(sex);
+let sex = question(' 1-is he a pogrammer?');
 alert(trueanswer(sex))
 // ###########################################
-let famous = prompt('2-is he a famous?').toLocaleLowerCase();
-console.log(famous)
+let famous = question('2-is he a famous?');
 alert(falsanswer(famous))
 // ###########################################
 
-let studie = prompt('3-is he an educated person?').toLocaleLowerCase();
-console.log(studie)
+let studie = question('3-is he an educated person?');
 alert(trueanswer(studie))
 // ###########################################
 
-let country = prompt ('4-is he live in Japan?').toLocaleLowerCase();
-console.log(country)
+let country = question('4-is he live in Japan?')
 alert(falsanswer(country))
 // ###########################################
-let beahive = prompt('5-is he a bad person?').toLocaleLowerCase();
+let beahive = question('5-is he a bad person?')
 console.log(beahive)
 alert(falsanswer(beahive))
 
 // ###########################################
-let watch = prompt('6-is he watch anime ?').toLocaleLowerCase();
+let watch = question('6-is he watch anime ?')
 console.log(watch)
 alert(trueanswer(watch))
 // ###########################################
