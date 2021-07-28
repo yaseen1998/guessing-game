@@ -1,4 +1,5 @@
  'use strict'
+ //____________________________________________
  function falsanswer(x){
     if (x == 'n' || x=='no'){
     return ('your answer is crroect'+corr++);
@@ -10,7 +11,7 @@
     }
   
 }
- 
+ //____________________________________________
 function trueanswer(x){
     if (x == 'y' || x == 'yes' ){
     return ('your answer is crroect'+corr++);
@@ -20,12 +21,45 @@ function trueanswer(x){
     }
   
 }
-function question (ask){
+ 
+ function question_programmer (ask){
     let ans = prompt(ask).toLocaleLowerCase();
     console.log(ans);
-    return (ans)
+    return trueanswer(ans)
 }
-function guessnumber (gu){
+//____________________________________________
+function question_famous (ask){
+    let ans = prompt(ask).toLocaleLowerCase();
+    console.log(ans);
+    return (falsanswer(ans))
+}
+//____________________________________________
+function question_educated (ask){
+    let ans = prompt(ask).toLocaleLowerCase();
+    console.log(ans);
+    return (trueanswer(ans))
+}
+//____________________________________________
+function question_live (ask){
+    let ans = prompt(ask).toLocaleLowerCase();
+    console.log(ans);
+    return (falsanswer(ans))
+}
+//____________________________________________
+function question_person (ask){
+    let ans = prompt(ask).toLocaleLowerCase();
+    console.log(ans);
+    return (falsanswer(ans))
+}
+//____________________________________________
+function question_watch (ask){
+    let ans = prompt(ask).toLocaleLowerCase();
+    console.log(ans);
+    return (trueanswer(ans))
+}
+
+//____________________________________________
+function question_guess_number(gu,tray_number){
     let true_number = Math.floor(Math.random() * 50) + 1
     console.log(true_number)
     confirm('now we will play a guess number : are you ready')
@@ -35,9 +69,9 @@ function guessnumber (gu){
     for(let i = 0;  guess_number != true_number  ; i++){
         console.log(guess_number)
     
-        if (i == 3){
+        if (i == tray_number){
             
-            alert('you try 4 time game over'+'\n'+`the coorect answer ${true_number}`)
+            alert('you try '+ tray_number+'time game over'+'\n'+`the coorect answer ${true_number}`)
             wrong++;
             break;
             
@@ -54,8 +88,6 @@ function guessnumber (gu){
         }
         
          guess_number =parseInt( prompt(gu));
-
-    
         
     }
     if (guess_number == true_number ){
@@ -63,50 +95,14 @@ function guessnumber (gu){
         corr++;
      }
 }
-let corr = 0;
-let wrong = 0;
-let username = prompt ('what is your name ');
-alert('I am Glad that you are here : '+ username);
-
-
-    let ask = prompt('1-check the Resume'+'\n'+'2-play a guessing-game'+'\n'+'please choose a number')
-
-switch(ask){
-case ('2'):alert('hello'+'\n'+'today you will play a guessing game about Yaseen Saeed'+'\n')
-confirm('you can answer with y/n or yes/no')
- confirm('lets begin')
-
-// let sex = question(' 1-is he a pogrammer?');
-// alert(trueanswer(sex))
-// // ###########################################
-// let famous = question('2-is he a famous?');
-// alert(falsanswer(famous))
-// // ###########################################
-
-// let studie = question('3-is he an educated person?');
-// alert(trueanswer(studie))
-// // ###########################################
-
-// let country = question('4-is he live in Japan?')
-// alert(falsanswer(country))
-// // ###########################################
-// let beahive = question('5-is he a bad person?')
-// alert(falsanswer(beahive))
-
-// // ###########################################
-// let watch = question('6-is he watch anime ?')
-// alert(trueanswer(watch))
-// // ###########################################
-
-let number = guessnumber('7-How many anime did he watch? (1-50)');
-
-
-confirm ('second game'+'\n'+'you have 6 attempts to guess the correct answer.')
+//____________________________________________
+function question_guess_word(programming,number_tray){
+    confirm ('second game'+'\n'+'you have 6 attempts to guess the correct answer.')
 let count = 0 
 
-let programming = ['python','c++','javascript']
+
 let guess_laguage = prompt('8-What programming languages does he know?'+'\n'+'[python , java , flutter , c#  , c , c++ , javascript , php').toLocaleLowerCase();
-for (let i = 0;i<5;i++){
+for (let i = 0;i<number_tray-1;i++){
     console.log(guess_laguage)
     if (count == 2){
         alert('you are clever you guessed all the answer')
@@ -135,28 +131,47 @@ if (count != 2){
 }
 alert('final mark '+'\n'+'correct answer : ' + corr + '/8'+'\n'+'wrong answer : '+(8-corr)+'/8')
 
-break;
 
+}
+//____________________________________________
+// ######################################################################
+let corr = 0;
+let wrong = 0;
+let username = prompt ('what is your name ');
+alert('I am Glad that you are here : '+ username);
+
+
+    let ask = prompt('1-check the Resume'+'\n'+'2-play a guessing-game'+'\n'+'please choose a number')
+
+switch(ask){
+case ('2'):alert('hello'+'\n'+'today you will play a guessing game about Yaseen Saeed'+'\n')
+confirm('you can answer with y/n or yes/no')
+ confirm('lets begin')
+
+
+alert(question_programmer(' 1-is he a pogrammer?'));
+// ###########################################
+alert(question_famous('2-is he a famous?'));
+// ###########################################
+alert(question_educated('3-is he an educated person?'));
+// ###########################################
+alert(question_live('4-is he live in Japan?'))
+// ###########################################
+alert(question_person('5-is he a bad person?'))
+// ###########################################
+alert(question_watch('6-is he watch anime ?'))
+// ###########################################
+let number = question_guess_number('7-How many anime did he watch? (1-50)',4);
+// ###########################################
+let word = question_guess_word( ['python','c++','javascript'],6)
+// ###########################################
+break;
 case('1'):alert('you are welcom')
 break;
 default:
       alert('You didnt answer : please refresh the page');
 }
 alert('Thanks you to visit us '+ username);    
-// for (let i = 0;i<4;i++){
-// let guess_number =parseInt( prompt('please guess a number from (1-100)'));
-// if(guess_number == true_number){
-//     alert('choose a correct');
-//     break;
-// }
-// while(guess_number != true_number){
-//     if(guess_number < true_number){
-//         alert('choose a big number');
-//         break;
-//     }
-//     else{
-//         alert('choose a small number');
-// break;         
-//     }
-// }
-// }
+
+//____________________________________________
+// ######################################################################
