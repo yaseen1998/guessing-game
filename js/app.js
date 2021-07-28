@@ -25,6 +25,44 @@ function question (ask){
     console.log(ans);
     return (ans)
 }
+function guessnumber (gu){
+    let true_number = Math.floor(Math.random() * 50) + 1
+    console.log(true_number)
+    confirm('now we will play a guess number : are you ready')
+    let guess_number =parseInt( prompt(gu));
+    console.log(corr)
+    console.log(wrong)
+    for(let i = 0;  guess_number != true_number  ; i++){
+        console.log(guess_number)
+    
+        if (i == 3){
+            
+            alert('you try 4 time game over'+'\n'+`the coorect answer ${true_number}`)
+            wrong++;
+            break;
+            
+        }
+       
+            
+         else if (guess_number < true_number ){
+            alert('too low')
+         }
+            
+        else{
+            alert('too high');
+            
+        }
+        
+         guess_number =parseInt( prompt(gu));
+
+    
+        
+    }
+    if (guess_number == true_number ){
+        alert(' you are a best you choose correct answer')
+        corr++;
+     }
+}
 let corr = 0;
 let wrong = 0;
 let username = prompt ('what is your name ');
@@ -38,63 +76,31 @@ case ('2'):alert('hello'+'\n'+'today you will play a guessing game about Yaseen 
 confirm('you can answer with y/n or yes/no')
  confirm('lets begin')
 
-let sex = question(' 1-is he a pogrammer?');
-alert(trueanswer(sex))
-// ###########################################
-let famous = question('2-is he a famous?');
-alert(falsanswer(famous))
-// ###########################################
+// let sex = question(' 1-is he a pogrammer?');
+// alert(trueanswer(sex))
+// // ###########################################
+// let famous = question('2-is he a famous?');
+// alert(falsanswer(famous))
+// // ###########################################
 
-let studie = question('3-is he an educated person?');
-alert(trueanswer(studie))
-// ###########################################
+// let studie = question('3-is he an educated person?');
+// alert(trueanswer(studie))
+// // ###########################################
 
-let country = question('4-is he live in Japan?')
-alert(falsanswer(country))
-// ###########################################
-let beahive = question('5-is he a bad person?')
-console.log(beahive)
-alert(falsanswer(beahive))
+// let country = question('4-is he live in Japan?')
+// alert(falsanswer(country))
+// // ###########################################
+// let beahive = question('5-is he a bad person?')
+// alert(falsanswer(beahive))
 
-// ###########################################
-let watch = question('6-is he watch anime ?')
-console.log(watch)
-alert(trueanswer(watch))
-// ###########################################
-let true_number = Math.floor(Math.random() * 50) + 1
-console.log(true_number)
-confirm('now we will play a guess number : are you ready')
-let guess_number =parseInt( prompt('7-How many anime did he watch? (1-50)'));
-console.log(corr)
-console.log(wrong)
-for(let i = 0;  guess_number != true_number  ; i++){
-    console.log(guess_number)
+// // ###########################################
+// let watch = question('6-is he watch anime ?')
+// alert(trueanswer(watch))
+// // ###########################################
 
-    if (i == 3){
-        
-        alert('you try 4 time game over'+'\n'+`the coorect answer ${true_number}`)
-        wrong++;
-        break;
-        
-    }
-    else if (guess_number == true_number ){
-        alert(' you are a best you choose correct answer')
-        corr++;
-     }
-        
-     else if (guess_number < true_number ){
-        alert('too low')
-     }
-        
-    else{
-        alert('too high');
-        
-    }
-    
-     guess_number =parseInt( prompt('7-How many anime did he watch?from(1-50)'));
+let number = guessnumber('7-How many anime did he watch? (1-50)');
 
-    
-}
+
 confirm ('second game'+'\n'+'you have 6 attempts to guess the correct answer.')
 let count = 0 
 
