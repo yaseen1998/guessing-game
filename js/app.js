@@ -64,7 +64,7 @@ alert(trueanswer(watch))
 let true_number = Math.floor(Math.random() * 50) + 1
 console.log(true_number)
 confirm('now we will play a guess number : are you ready')
-let guess_number =parseInt( prompt('7-please guess a number from (1-50)'));
+let guess_number =parseInt( prompt('7-How many anime did he watch? (1-50)'));
 console.log(corr)
 console.log(wrong)
 for(let i = 0;  guess_number != true_number  ; i++){
@@ -91,7 +91,7 @@ for(let i = 0;  guess_number != true_number  ; i++){
         
     }
     
-     guess_number =parseInt( prompt('7-please guess a number from (1-100)'));
+     guess_number =parseInt( prompt('7-How many anime did he watch?from(1-50)'));
 
     
 }
@@ -99,7 +99,7 @@ confirm ('second game'+'\n'+'you have 6 attempts to guess the correct answer.')
 let count = 0 
 
 let programming = ['python','c++','javascript']
-let guess_laguage = prompt('8-guess the common 3 progrmming language in 2021'+'\n'+'[python , java , flutter , c#  , c , c++ , javascript , php').toLocaleLowerCase();
+let guess_laguage = prompt('8-What programming languages does he know?'+'\n'+'[python , java , flutter , c#  , c , c++ , javascript , php').toLocaleLowerCase();
 for (let i = 0;i<5;i++){
     console.log(guess_laguage)
     if (count == 2){
@@ -118,7 +118,7 @@ for (let i = 0;i<5;i++){
         }
     }
     
-    guess_laguage = prompt('8-guess the common 3 progrmming language in 2021'+'\n'+'[python , java , flutter , c#  , c , c++ , javascript , php').toLocaleLowerCase();
+    guess_laguage = prompt('8-What programming languages does he know?'+'\n'+'[python , java , flutter , c#  , c , c++ , javascript , php').toLocaleLowerCase();
 
     
 
