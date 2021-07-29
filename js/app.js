@@ -1,10 +1,18 @@
  'use strict'
-  // this code for strech goal abbreviate the code for the yes or no question in one function and one call with array the call in line 165
-   // function yes_no(ask,answ){
+  // this code for strech goal abbreviate the code for the yes or no question in one function and one call with array the call in line 23
+//     function yes_no(ask,answ){
+//  let dra = []
 //    for (let i = 0;i<ask.length;i++){
+//     if(answ[i]=='y'){
+//         dra.push('yes');
+//     }
+//       else{
+//           dra.push('no')
+//       }
+     
 //      let ans = prompt(ask[i]).toLocaleLowerCase();
 //      console.log(ans);
-//      if(ans==answ[i]){
+//      if(ans==answ[i] || ans==dra[i]){
 //     alert ('your answer is crroect');
 //     }
 //     else{
@@ -12,7 +20,8 @@
 //     }
 //      }
 //  }
-
+//yes_no([' 1-is he a pogrammer?','2-is he a famous?','3-is he an educated person?','4-is he live in Japan?','5-is he a bad person?','6-is he watch anime ?'],['y','n','y','n','n','y'])
+ 
  //____________________________________________
  function falsanswer(x){
     if (x == 'n' || x=='no'){
@@ -162,7 +171,6 @@ case ('2'):alert('hello'+'\n'+'today you will play a guessing game about Yaseen 
 confirm('you can answer with y/n or yes/no')
  confirm('lets begin')
 
-// this code for strech goal yes_no([' 1-is he a pogrammer?','2-is he a famous?','3-is he an educated person?','4-is he live in Japan?','5-is he a bad person?','6-is he watch anime ?'],['y','n','y','n','n','y'])
 
 alert(question_programmer(' 1-is he a pogrammer?'));
 // ###########################################
