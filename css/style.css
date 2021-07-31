@@ -27,10 +27,67 @@ aside {
         font-size :20px;
     }
 
-div {font-size :20px;
+.var2 {font-size :20px;
 display: block;
 padding:20px;
 background-color:blueviolet;
 border:dashed;
  border-width:10px;
+ width: 650px;
+}
+
+.var1{
+    position :fixed;
+    right: 100px;
+    width: 350px;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: right;
+    font-size :20px;
+    background-color: lightgray;
+}
+.sticky{
+    
+    position :sticky;
+}
+.td {
+    display: table-cell;
+    min-width: 10px;
+}
+ba {
+    border-spacing: 0;
+}
+.mgb {
+    margin-bottom: 10px;
+}
+.full {
+    width: 100%!important;
+    box-sizing: border-box;
+}
+.table {
+    display: table;
+}
+.left {
+    position: relative;
+}
+.viewport_left {
+    width: 400px;
+    padding: 0 10px 0 0;
+}
+.vat {
+    vertical-align: top;
+}
+#head {
+    z-index: 30;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+
+    border: none;
+    box-shadow: 1px 0 2px 1px #ddd;
+    box-sizing: border-box;
+    padding:20px;
+    font-size: 30px;
 }
